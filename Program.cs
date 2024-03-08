@@ -1,7 +1,12 @@
+using Lottery.DBFirst;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<LotteryDbContext>(options =>
+	options.UseSqlServer("Server=localhost;Database=self-study;prot:3306;User=root;Password=123456"));
 
 var app = builder.Build();
 

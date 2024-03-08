@@ -24,9 +24,5 @@
 		///抽奖号码
 		/// </summary>
 		public int LotteryNum { get; set; }
-		/// <summary>
-		/// 抽奖Id
-		/// </summary>
-		public int LotteryId { get; set; }
 	}
 }

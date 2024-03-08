@@ -3,9 +3,9 @@
 	public class LotteryTable
 	{
 		/// <summary>
-		/// 中奖Id
+		/// 中奖号码
 		/// </summary>
-		public int LotteryId { get; set; }
+		public int LotteryNum { get; set; }
 		/// <summary>
 		/// 中奖信息
 		/// </summary>
