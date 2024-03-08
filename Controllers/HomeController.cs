@@ -116,6 +116,32 @@ namespace Lottery.Controllers
 			string formattedCount = count+1.ToString("D4"); // 将数字格式化为四位数的字符串
 			return formattedCount;
 		}
+
+		/// <summary>
+		/// 根据微信号获取抽奖号码
+		/// </summary>
+		/// <param name="WxNum"></param>
+		/// <returns></returns>
+		public async Task<dynamic> GetWxNumberDetil(string WxNum)
+		{
+			if (WxNum != null)
+			{
+				var query= await _context.lotteryUsers.FindAsync(WxNum);
+				if (query == null)
+				{
+					return ("DuplicateData", "未查到当前用户信息");
+				}
+				return query;
+				
+			}
+			else
+			{
+				ModelState.AddModelError("DuplicateData", "该用户微信号未填写");
+				return View();
+			}
+			
+		}
+
 		/// <summary>
 		/// 获取中奖号码所有数据
 		/// </summary>
