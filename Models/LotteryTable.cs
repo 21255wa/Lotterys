@@ -1,5 +1,8 @@
-﻿namespace Lottery.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Lottery.Models
 {
+	[Keyless]
 	public class LotteryTable
 	{
 		/// <summary>
