@@ -64,7 +64,12 @@ namespace Lottery.Controllers
 					}
 					else
 					{
+						//获取号码
+						var LotteryNum =await GetLotteryUserCount();
+						if (LotteryNum != null) {
+							lotteryUser.LotteryNum = int.Parse(LotteryNum);
 
+						}
 						// 如果不存在重复数据，插入新数据
 						_context.lotteryUsers.Add(lotteryUser);
 
