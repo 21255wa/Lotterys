@@ -100,9 +100,8 @@ namespace Lottery.Controllers
 		private string GenerateWinningMessage()
 		{
 			// 这里可以根据具体需求生成中奖信息，比如随机生成、根据规则生成等
-			// 这里只是一个示例，实际中需要根据业务需求来编写相应的逻辑
 			Random random = new Random();
-			int randomWinningNumber = random.Next(1,5); // 生成 1 到 100 之间的随机数作为中奖信息
+			int randomWinningNumber = random.Next(1,5); // 生成 1 到 5 之间的随机数作为中奖信息
 			string message = randomWinningNumber + "等奖";
 			return message;
 		}
@@ -136,8 +135,7 @@ namespace Lottery.Controllers
 			}
 			else
 			{
-				ModelState.AddModelError("DuplicateData", "该用户微信号未填写");
-				return View();
+				return ("DuplicateData", "该用户微信号未填写");
 			}
 			
 		}
