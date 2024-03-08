@@ -1,0 +1,103 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .active {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .active_banner .image {
+            padding: 40px 0px;
+        }
+
+            .active_banner .image img {
+                width: 250px;
+                height: 50px;
+            }
+
+        .active_body {
+            flex: auto;
+        }
+
+            .active_body p input {
+                border-radius: 15px;
+                width: 400px;
+                height: 40px;
+                border: solid 1px #f6e3e4;
+                margin-top: 50px;
+                text-indent: 20px;
+            }
+
+        .addActive {
+            border-radius: 15px;
+            width: 400px;
+            height: 40px;
+            background-color: #ff281a;
+            color: #fff;
+            border: none;
+            margin-top: 70px;
+        }
+
+        .active_footer p {
+            width: 350px;
+            color: #e94230;
+            margin-top: 10px;
+            font-size: 11px;
+            text-align: center;
+        }
+    </style>
+    <body>
+        <div class="active">
+            <div class="active_banner">
+                <p class="image">
+                    <img class="" src="./image/xsj.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+                </p>
+            </div>
+            <div class="active_body">
+                <p>
+                    <input class="UserName" placeholder="已注册微信号" />
+                </p>
+                <p>
+                    <button class="addActive" onclick="getInputValue()">查询兑奖号码</button>
+                </p>
+                <p>
+                    <input class="UserName" placeholder="已注册微信号" />
+                </p>
+            </div>
+            <div class="active_footer">
+                <p>仅限3月19日美商会抽奖活动期间核对中奖信息所用</p>
+                <p>请提前加抽奖公布微信号好友以便知晓中奖信息</p>
+                <p>过期自动关闭入口</p>
+            </div>
+        </div>
+    </body>
+    <script>
+        function getInputValue() {
+            var UserName = document.querySelector('.UserName').value,
+                WeChat = document.querySelector('.WeChat').value,
+                name = document.querySelector('.name').value;
+            alert(`昵称：${UserName},微信号：${WeChat},公司名称：${name}`);
+        }
+    </script>
+</html>
+</div>
